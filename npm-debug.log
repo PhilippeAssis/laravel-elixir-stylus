@@ -12,76 +12,76 @@
 7 silly cache add   rawSpec: './',
 7 silly cache add   spec: '/home/assis/gits/laravel-elixir-stylus',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/assis/.npm/laravel-elixir-stylus/2.0.2/package.tgz not in flight; packing
+8 verbose addLocalDirectory /home/assis/.npm/laravel-elixir-stylus-assis/3.0.0/package.tgz not in flight; packing
 9 verbose correctMkdir /home/assis/.npm correctMkdir not in flight; initializing
-10 info lifecycle laravel-elixir-stylus@2.0.2~prepublish: laravel-elixir-stylus@2.0.2
-11 silly lifecycle laravel-elixir-stylus@2.0.2~prepublish: no script for prepublish, continuing
-12 verbose tar pack [ '/home/assis/.npm/laravel-elixir-stylus/2.0.2/package.tgz',
+10 info lifecycle laravel-elixir-stylus-assis@3.0.0~prepublish: laravel-elixir-stylus-assis@3.0.0
+11 silly lifecycle laravel-elixir-stylus-assis@3.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/assis/.npm/laravel-elixir-stylus-assis/3.0.0/package.tgz',
 12 verbose tar pack   '/home/assis/gits/laravel-elixir-stylus' ]
-13 verbose tarball /home/assis/.npm/laravel-elixir-stylus/2.0.2/package.tgz
+13 verbose tarball /home/assis/.npm/laravel-elixir-stylus-assis/3.0.0/package.tgz
 14 verbose folder /home/assis/gits/laravel-elixir-stylus
-15 verbose addLocalTarball adding from inside cache /home/assis/.npm/laravel-elixir-stylus/2.0.2/package.tgz
+15 verbose addLocalTarball adding from inside cache /home/assis/.npm/laravel-elixir-stylus-assis/3.0.0/package.tgz
 16 verbose correctMkdir /home/assis/.npm correctMkdir not in flight; initializing
-17 silly cache afterAdd laravel-elixir-stylus@2.0.2
-18 verbose afterAdd /home/assis/.npm/laravel-elixir-stylus/2.0.2/package/package.json not in flight; writing
+17 silly cache afterAdd laravel-elixir-stylus-assis@3.0.0
+18 verbose afterAdd /home/assis/.npm/laravel-elixir-stylus-assis/3.0.0/package/package.json not in flight; writing
 19 verbose correctMkdir /home/assis/.npm correctMkdir not in flight; initializing
-20 verbose afterAdd /home/assis/.npm/laravel-elixir-stylus/2.0.2/package/package.json written
-21 silly publish { name: 'laravel-elixir-stylus',
-21 silly publish   version: '2.0.2',
+20 verbose afterAdd /home/assis/.npm/laravel-elixir-stylus-assis/3.0.0/package/package.json written
+21 silly publish { name: 'laravel-elixir-stylus-assis',
+21 silly publish   version: '3.0.0',
 21 silly publish   description: 'Laravel Elixir Stylus Extension',
 21 silly publish   main: 'index.js',
 21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
 21 silly publish   keywords: [ 'laravel', 'elixir', 'stylus', 'gulp' ],
 21 silly publish   repository:
 21 silly publish    { type: 'git',
-21 silly publish      url: 'git+https://github.com/JeffreyWay/laravel-elixir-stylus.git' },
-21 silly publish   author: { name: 'Jeffrey Way' },
+21 silly publish      url: 'git+https://github.com/PhilippeAssis/laravel-elixir-stylus.git' },
+21 silly publish   author: { name: 'Philippe Assis' },
 21 silly publish   license: 'MIT',
-21 silly publish   homepage: 'https://github.com/JeffreyWay/laravel-elixir-stylus',
-21 silly publish   bugs: { url: 'https://github.com/JeffreyWay/laravel-elixir-stylus/issues' },
+21 silly publish   homepage: 'https://github.com/PhilippeAssis/laravel-elixir-stylus',
+21 silly publish   bugs: { url: 'https://github.com/PhilippeAssis/laravel-elixir-stylus/issues' },
 21 silly publish   dependencies: { 'gulp-stylus': '^2.0.6', lost: '^6.5.0', poststylus: '^0.2.0' },
-21 silly publish   readme: '## Usage\n\nThis Laravel Elixir extension allows you to compile Stylus.\n\n## Installation\n\nFirst, pull in the extension through NPM.\n\n```\nnpm install --save-dev laravel-elixir-stylus\n```\n\n> Note: if using Laravel Elixir 6 or higher, pull in `laravel-elixir-stylus@2.x`. Otherwise, stick with `laravel-elixir-stylus@1.x`.\n\nNext, add it to your Elixir-enhanced Gulpfile, like so:\n\n```js\nvar elixir = require(\'laravel-elixir\');\n\nrequire(\'laravel-elixir-stylus\');\n\nelixir(function(mix) {\n   mix.stylus(\'app.styl\');\n});\n```\n\nThat\'s it! You\'re all set to go!\n\n## Usage\n\nAssuming you write...\n\n```js\nelixir(function(mix) {\n   mix.stylus(\'app.styl\');\n});\n```\n\n...this will compile your `resources/assets/stylus/app.styl` file to `./public/css/app.css`.\n\nIf you\'d like to set a different output directory, you may pass a second argument to the `stylus()` method, like so:\n\n```js\nmix.stylus(\'app.styl\', \'./public/scripts/styles.css\')\n```\n\nFinally, if you want to override the Stylus plugin options, you may pass an object as the third argument.\n\n```js\nmix.stylus(\'app.styl\', null, {});\n\n// See options at: https://www.npmjs.com/package/gulp-stylus#options\n```\n\n## PostCSS\n\nThis extension includes a PostCSS adapter out of the box, as well as support for the incredibly impressive [Lost](https://github.com/corysimmons/lost) grid system. Check out the documentation in that link, and immediately start using it in your projects with this extension. Zero setup. :)\n\nIf there are other PostCSS plugins you want to pull in, you may use the third argument to `mix.stylus()` - \n\n```js\nvar postStylus = require(\'poststylus\'); // npm install --save-dev poststylus\n\nmix.stylus(\'app.styl\', null, {\n   use: [postStylus([\'lost\', \'postcss-position\'])]\n});\n```\n',
+21 silly publish   readme: '## Usage\n\nThis Laravel Elixir extension allows you to compile Stylus.\n\n## Installation\n\nFirst, pull in the extension through NPM.\n\n```\nnpm install --save-dev laravel-elixir-stylus\n```\n\nNext, add it to your Elixir-enhanced Gulpfile, like so:\n\n```js\nvar elixir = require(\'laravel-elixir\');\n\nrequire(\'laravel-elixir-stylus\');\n\nelixir(function(mix) {\n   mix.stylus(\'app.styl\');\n});\n```\n\nThat\'s it! You\'re all set to go!\n\n## Usage\n\nAssuming you write...\n\n```js\nelixir(function(mix) {\n   mix.stylus(\'app.styl\');\n});\n```\n\n...this will compile your `resources/assets/stylus/app.styl` file to `./public/css/app.css`.\n\nIf you\'d like to set a different output directory, you may pass a second argument to the `stylus()` method, like so:\n\n```js\nmix.stylus(\'app.styl\', \'./public/scripts/styles.css\')\n```\n\nFinally, if you want to override the Stylus plugin options, you may pass an object as the third argument.\n\n```js\nmix.stylus(\'app.styl\', null, {});\n\n// See options at: https://www.npmjs.com/package/gulp-stylus#options\n```\n\n## PostCSS\n\nThis extension includes a PostCSS adapter out of the box, as well as support for the incredibly impressive [Lost](https://github.com/corysimmons/lost) grid system. Check out the documentation in that link, and immediately start using it in your projects with this extension. Zero setup. :)\n\nIf there are other PostCSS plugins you want to pull in, you may use the third argument to `mix.stylus()` -\n\n```js\nvar postStylus = require(\'poststylus\'); // npm install --save-dev poststylus\n\nmix.stylus(\'app.styl\', null, {\n   use: [postStylus([\'lost\', \'postcss-position\'])]\n});\n```\n',
 21 silly publish   readmeFilename: 'readme.md',
-21 silly publish   gitHead: '39d2dbccd8c2d2750827c18e517b007fc2a30877',
-21 silly publish   _id: 'laravel-elixir-stylus@2.0.2',
-21 silly publish   _shasum: 'ade5231b730639b8effc1e9959b7b0f919031c5e',
+21 silly publish   gitHead: '36be10ff1debe86a3858466f0d3a26bbee0284ac',
+21 silly publish   _id: 'laravel-elixir-stylus-assis@3.0.0',
+21 silly publish   _shasum: 'eda8fe3203cb1c803f181ce08741b3629cabd7d9',
 21 silly publish   _from: '.' }
 22 verbose getPublishConfig undefined
-23 silly mapToRegistry name laravel-elixir-stylus
+23 silly mapToRegistry name laravel-elixir-stylus-assis
 24 silly mapToRegistry using default registry
 25 silly mapToRegistry registry https://registry.npmjs.org/
 26 silly mapToRegistry data Result {
-26 silly mapToRegistry   raw: 'laravel-elixir-stylus',
+26 silly mapToRegistry   raw: 'laravel-elixir-stylus-assis',
 26 silly mapToRegistry   scope: null,
-26 silly mapToRegistry   name: 'laravel-elixir-stylus',
+26 silly mapToRegistry   name: 'laravel-elixir-stylus-assis',
 26 silly mapToRegistry   rawSpec: '',
 26 silly mapToRegistry   spec: 'latest',
 26 silly mapToRegistry   type: 'tag' }
-27 silly mapToRegistry uri https://registry.npmjs.org/laravel-elixir-stylus
+27 silly mapToRegistry uri https://registry.npmjs.org/laravel-elixir-stylus-assis
 28 verbose publish registryBase https://registry.npmjs.org/
-29 silly publish uploading /home/assis/.npm/laravel-elixir-stylus/2.0.2/package.tgz
-30 verbose request uri https://registry.npmjs.org/laravel-elixir-stylus
+29 silly publish uploading /home/assis/.npm/laravel-elixir-stylus-assis/3.0.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/laravel-elixir-stylus-assis
 31 verbose request sending authorization for write operation
-32 info attempt registry request try #1 at 07:14:43
+32 info attempt registry request try #1 at 07:30:44
 33 verbose request using bearer token for auth
-34 verbose request id 1e90d3300f9a79b9
-35 http request PUT https://registry.npmjs.org/laravel-elixir-stylus
-36 http 403 https://registry.npmjs.org/laravel-elixir-stylus
+34 verbose request id 9dad9b148c40a859
+35 http request PUT https://registry.npmjs.org/laravel-elixir-stylus-assis
+36 http 403 https://registry.npmjs.org/laravel-elixir-stylus-assis
 37 verbose headers { 'content-type': 'application/json',
 37 verbose headers   'cache-control': 'max-age=300',
-37 verbose headers   'content-length': '115',
+37 verbose headers   'content-length': '95',
 37 verbose headers   'accept-ranges': 'bytes',
-37 verbose headers   date: 'Sat, 04 Jun 2016 12:14:44 GMT',
+37 verbose headers   date: 'Sat, 04 Jun 2016 12:30:45 GMT',
 37 verbose headers   via: '1.1 varnish',
 37 verbose headers   connection: 'keep-alive',
-37 verbose headers   'x-served-by': 'cache-lax1429-LAX',
+37 verbose headers   'x-served-by': 'cache-lax1423-LAX',
 37 verbose headers   'x-cache': 'MISS',
 37 verbose headers   'x-cache-hits': '0',
-37 verbose headers   'x-timer': 'S1465042484.295194,VS0,VE140',
+37 verbose headers   'x-timer': 'S1465043445.696779,VS0,VE169',
 37 verbose headers   vary: 'Accept-Encoding' }
-38 verbose request invalidating /home/assis/.npm/registry.npmjs.org/laravel-elixir-stylus on PUT
+38 verbose request invalidating /home/assis/.npm/registry.npmjs.org/laravel-elixir-stylus-assis on PUT
 39 error publish Failed PUT 403
-40 verbose stack Error: you do not have permission to publish "laravel-elixir-stylus". Are you logged in as the correct user? : laravel-elixir-stylus
+40 verbose stack Error: "You cannot publish over the previously published version 3.0.0." : laravel-elixir-stylus-assis
 40 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
 40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
 40 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
@@ -93,14 +93,14 @@
 40 verbose stack     at Request.emit (events.js:182:7)
 40 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:963:12)
 41 verbose statusCode 403
-42 verbose pkgid laravel-elixir-stylus
+42 verbose pkgid laravel-elixir-stylus-assis
 43 verbose cwd /home/assis/gits/laravel-elixir-stylus
 44 error Linux 4.4.0-22-generic
 45 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish" "./"
 46 error node v5.11.1
 47 error npm  v3.8.6
 48 error code E403
-49 error you do not have permission to publish "laravel-elixir-stylus". Are you logged in as the correct user? : laravel-elixir-stylus
+49 error "You cannot publish over the previously published version 3.0.0." : laravel-elixir-stylus-assis
 50 error If you need help, you may report this error at:
 50 error     <https://github.com/npm/npm/issues>
 51 verbose exit [ 1, true ]

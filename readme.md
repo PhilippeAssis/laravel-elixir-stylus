@@ -10,8 +10,6 @@ First, pull in the extension through NPM.
 npm install --save-dev laravel-elixir-stylus
 ```
 
-> Note: if using Laravel Elixir 6 or higher, pull in `laravel-elixir-stylus@2.x`. Otherwise, stick with `laravel-elixir-stylus@1.x`.
-
 Next, add it to your Elixir-enhanced Gulpfile, like so:
 
 ```js
@@ -56,7 +54,7 @@ mix.stylus('app.styl', null, {});
 
 This extension includes a PostCSS adapter out of the box, as well as support for the incredibly impressive [Lost](https://github.com/corysimmons/lost) grid system. Check out the documentation in that link, and immediately start using it in your projects with this extension. Zero setup. :)
 
-If there are other PostCSS plugins you want to pull in, you may use the third argument to `mix.stylus()` - 
+If there are other PostCSS plugins you want to pull in, you may use the third argument to `mix.stylus()` -
 
 ```js
 var postStylus = require('poststylus'); // npm install --save-dev poststylus
